@@ -1,0 +1,5 @@
+name: ems-backend-chart
+description: A Helm chart for deploying EMS REST API and PostgreSQL
+type: application
+version: 0.1.0
+

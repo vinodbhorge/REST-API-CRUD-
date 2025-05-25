@@ -1,0 +1,22 @@
+backend:
+  image: vinodbbhorge/employee-management-project:v1
+  imagePullPolicy: IfNotPresent
+  replicas: 1
+  containerPort: 8080
+  service:
+    type: ClusterIP
+    port: 8080
+
+postgres:
+  image: postgres:15
+  containerPort: 5432
+  username: postgres
+  password: system
+  database: ems
+  service:
+    type: ClusterIP
+    port: 5432
+  persistence:
+    enabled: true
+    size: 1Gi
+
